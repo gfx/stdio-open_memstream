@@ -9,7 +9,7 @@ int main() {
     fprintf(mem, "Hello, world!");
     fclose(mem);
 
-    printf("[%s][%zd]\n", buf, buf_len);
+    printf("[%s][%zd]\n", buf, buf_len); // => [Hello, world!][13]
     free(buf);
 
     return 0;
