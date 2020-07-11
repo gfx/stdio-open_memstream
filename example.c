@@ -7,10 +7,10 @@ int main() {
     FILE *mem = open_memstream(&buf, &buf_len);
 
     fprintf(mem, "Hello, world!");
-    fclose(mem);
+    fflush(mem);
 
     printf("[%s][%zd]\n", buf, buf_len); // => [Hello, world!][13]
-    free(buf);
+    fclose(buf);
 
     return 0;
 }
